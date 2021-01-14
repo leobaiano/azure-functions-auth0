@@ -19,9 +19,9 @@ module.exports = (options) => {
   }
 
   const middleware = jwt({
-    secret: new Buffer(options.clientSecret, 'base64'),
+    secret: options.clientSecret,
     audience: options.clientId,
-    issuer: 'https://' + options.domain + '/'
+    issuer: options.domain + '/'
   });
 
   return (next) => {
