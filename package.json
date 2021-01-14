@@ -1,5 +1,5 @@
 {
-  "name": "azure-functions-auth0",
+  "name": "azure-functions-auth0-fork",
   "version": "1.0.1",
   "description": "Authenticate your Azure Functions with Auth0",
   "main": "lib/index.js",
@@ -7,12 +7,10 @@
     "express-jwt": "^3.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
+    "babel-istanbul": "^0.6.0",
     "babel-cli": "^6.4.5",
     "babel-core": "^6.4.5",
     "babel-eslint": "^4.1.6",
-    "babel-istanbul": "^0.6.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
     "chai": "^3.5.0",
@@ -22,16 +20,9 @@
     "mocha": "^2.4.5",
     "rimraf": "^2.5.1"
   },
-  "scripts": {
-    "clean": "rimraf lib/",
-    "compile": "babel -d lib/ src/",
-    "prepublish": "npm run clean && npm run compile",
-    "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
-    "test-watch": "NODE_ENV=test mocha --compilers js:babel-core/register --timeout 5000 $(find ./tests -name *.tests.js) --watch"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sandrinodimattia/azure-functions-auth0.git"
+    "url": "git+https://github.com/leobaiano/azure-functions-auth0.git"
   },
   "keywords": [
     "azure",
@@ -40,7 +31,7 @@
   "author": "Sandrino Di Mattia",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sandrinodimattia/azure-functions-auth0/issues"
+    "url": "https://github.com/leobaiano/azure-functions-auth0/issues"
   },
-  "homepage": "https://github.com/sandrinodimattia/azure-functions-auth0#readme"
+  "homepage": "https://github.com/leobaiano/azure-functions-auth0#readme"
 }
